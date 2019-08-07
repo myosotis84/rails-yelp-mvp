@@ -18,10 +18,15 @@ ul {
 }
 
 .content {
-  width: 100%;
-  margin: 16px 24px;
+  width: 95%;
+  margin: 16px 32px;
 }
 
 p {
   margin-top: 16px;
+}
+
+.form {
+  width: 50vw;
+  min-width: 240px;
 }
