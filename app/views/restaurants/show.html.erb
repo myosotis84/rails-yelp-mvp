@@ -1,0 +1,18 @@
+<div class="content">
+  <h1><%= @restaurant.name %> <span>(<%= @restaurant.category %>)</span></h1>
+  <p><%= @restaurant.address %></p>
+  <p><%= @restaurant.phone_number %></p>
+  <h3>Reviews</h3>
+  <% if @restaurant.reviews.empty? %>
+    No reviews yet
+  <% else %>
+    <ul>
+      <% @restaurant.reviews.each do |review| %>
+        <li class="li-no-style">Rating: <%= review.rating %> / 5</br><%= review.content %></li>
+      <% end %>
+    </ul>
+  <% end %>
+
+  <p><%= link_to "Write a review", new_restaurant_review_path(@restaurant) %></p>
+  <p><%= link_to "Back to all restaurants", restaurants_path %></p>
+</div>

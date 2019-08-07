@@ -1,0 +1,8 @@
+<div class="content">
+  <h1>Restaurants</h1>
+  <ul>
+    <% @restaurants.each do |restaurant| %>
+      <li class="li-no-style"><%= link_to restaurant.name, restaurant_path(restaurant) %> (<%= restaurant.category %>)</li>
+    <% end %>
+  </ul>
+</div>
